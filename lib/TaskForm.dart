@@ -123,7 +123,7 @@ class _TaskFormState extends State<TaskForm> {
                         errorBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(15),
                             borderSide:
-                            BorderSide(color: Colors.red, width: 3)),
+                                BorderSide(color: Colors.red, width: 3)),
                         labelText: "Due date",
                         labelStyle: TextStyle(
                             color: Colors.grey, fontWeight: FontWeight.w800),
@@ -152,15 +152,13 @@ class _TaskFormState extends State<TaskForm> {
                       onPressed: () async {
                         if (key1.currentState!.validate()) {
                           if (widget.map == null) {
-                            await addData().then(
-                                (value){
-                                  Navigator.of(context).pop(true);
-                                });
+                            await addData().then((value) {
+                              Navigator.of(context).pop(true);
+                            });
                           } else {
-                            await updateData().then(
-                                (value){
-                                  Navigator.of(context).pop(true);
-                                });
+                            await updateData().then((value) {
+                              Navigator.of(context).pop(true);
+                            });
                           }
                         }
                       },

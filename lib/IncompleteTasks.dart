@@ -25,18 +25,20 @@ class _IncompleteTasksState extends State<IncompleteTasks> {
                   if (snapshotList.data!.length == 0) {
                     return Center(
                         child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Opacity(
                           opacity: 0.4,
                           child: Image.asset('assets/images/rest.jpg',
                               width: MediaQuery.of(context).size.width * 0.5),
                         ),
-                        Text('Nothing to do',style: TextStyle(
-                          fontSize: 18,
-                          color: Colors.grey,
-                          fontWeight: FontWeight.w600
-                        ),),
+                        Text(
+                          'Nothing to do',
+                          style: TextStyle(
+                              fontSize: 18,
+                              color: Colors.grey,
+                              fontWeight: FontWeight.w600),
+                        ),
                       ],
                     ));
                   } else {
